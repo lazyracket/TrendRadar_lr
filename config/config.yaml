@@ -77,109 +77,288 @@ weight:
 
 # name 可以定义任意名称，只具有显示作用，即使项目运行了几天后，忽然改掉 name 也不会影响代码的正常运行
 platforms:
-  
-  # === 综合新闻媒体类 ===
-  - id: "toutiao"
-    name: "今日头条"
-  - id: "baidu"
-    name: "百度热搜"
-  - id: "thepaper"
-    name: "澎湃新闻"
-  - id: "ifeng"
-    name: "凤凰网"
-  - id: "cankaoxiaoxi"
-    name: "参考消息"
-  - id: "sputniknewscn"
-    name: "卫星通讯社"
-  - id: "zaobao"
-    name: "联合早报"
-  - id: "mktnews"
-    name: "MKT新闻"
-  - id: "kaopu"
-    name: "靠谱新闻"
 
-  # === 财经投资类 ===
-  - id: "wallstreetcn-hot"
-    name: "华尔街见闻 最热"
-  - id: "wallstreetcn-quick"
-    name: "华尔街见闻 快讯"
-  - id: "wallstreetcn-news"
-    name: "华尔街见闻 最新"
-  - id: "cls-hot"
-    name: "财联社热门"
-  - id: "gelonghui"
-    name: "格隆汇"
-  - id: "xueqiu"
-    name: "雪球"
-  - id: "jin10"
-    name: "金十数据"
-  - id: "fastbull"
-    name: "快讯通"
+# TrendRadar 所有平台 YAML 配置
+# 
+# 使用说明：
+# 1. 选择你需要的平台
+# 2. 复制到 config/config.yaml 的 platforms 部分
+# 3. 保存并运行测试
+#
+# 建议：选择 5-15 个平台，平衡信息量和性能
 
-  # === 社交/短视频/娱乐类 ===
-  - id: "weibo"
-    name: "微博"
-  - id: "douyin"
-    name: "抖音"
-  - id: "bilibili-hot-search"
-    name: "bilibili 热搜"
-  - id: "tieba"
-    name: "贴吧"
-  - id: "zhihu"
-    name: "知乎"
-  - id: "hupu"
-    name: "虎扑"
+# ============================================
+# 中国平台 - 社交媒体与资讯 (25个)
+# ============================================
 
-  # === 科技类平台 ===
-  - id: "ithome"
-    name: "IT之家"
-  - id: "juejin"
-    name: "掘金"
-  - id: "github"
-    name: "GitHub"
-  - id: "hackernews"
-    name: "Hacker News"
-  - id: "solidot"
-    name: "Solidot"
-  - id: "v2ex"
-    name: "V2EX"
-  - id: "nowcoder"
-    name: "牛客网"
-  - id: "pcbeta"
-    name: "远景论坛"
-  - id: "sspai"
-    name: "少数派"
-  - id: "producthunt"
-    name: "ProductHunt"
+## 社交媒体
 
-  # === 其他/工具类 ===
-  - id: "chongbuluo"
-    name: "虫部落"
+- id: "weibo"
+  name: "微博"
 
-  # ======================================================
-  # 暂时失败的渠道（可能需要修复或接口已变更）
-  # 备注：以下渠道在测试中抓取失败，已暂时注释
-  # 如需使用请检查API接口状态或联系维护团队
-  # ======================================================
+- id: "douyin"
+  name: "抖音"
+
+- id: "kuaishou"
+  name: "快手"
+
+- id: "zhihu"
+  name: "知乎"
   
-  # 失败的综合新闻媒体类
-  # - id: "sina"
-  #   name: "新浪"           # 失败原因：接口可能已变更
-  # - id: "sohu" 
-  #   name: "搜狐"           # 失败原因：接口可能已变更
+## 综合资讯
+
+- id: "thepaper"
+  name: "澎湃新闻"
+
+- id: "ifeng"
+  name: "凤凰网"
+
+- id: "toutiao"
+  name: "今日头条"
+
+- id: "baidu"
+  name: "百度热搜"
   
-  # 失败的财经类
-  # - id: "ghxi"
-  #   name: "国海证券"       # 失败原因：接口可能已变更
+## 视频平台
+
+- id: "bilibili-hot-search"
+  name: "哔哩哔哩"
+
+# - id: "bilibili-hot-video"
+#   name: "哔哩哔哩"
+
+# - id: "bilibili-ranking"
+#   name: "哔哩哔哩"
+
+## 社区
+
+- id: "hupu"
+  name: "虎扑"
+
+- id: "douban"
+  name: "豆瓣"
+
+# - id: "tieba"
+#   name: "百度贴吧"
   
-  # 失败的社交/短视频类
-  # - id: "kuaishou"
-  #   name: "快手"           # 失败原因：接口可能已变更
-  # - id: "smzdm"
-  #   name: "什么值得买"     # 失败原因：接口可能已变更
+# - id: "chongbuluo-latest"
+#   name: "虫部落"
+
+# - id: "chongbuluo-hot"
+#   name: "虫部落"
+
+# - id: "nowcoder"
+#   name: "牛客"
+
+# ============================================
+# 科技平台 (11个)
+# ============================================
+
+## 中文科技
+
+- id: "36kr-quick"
+  name: "36氪"
+
+- id: "juejin"
+  name: "稀土掘金"
+
+- id: "sspai"
+  name: "少数派"
+
+- id: "coolapk"
+  name: "酷安"
+
+- id: "pcbeta-windows11"
+  name: "远景论坛"
   
-  # 失败的科技类
-  # - id: "36kr"
-  #   name: "36氪"           # 失败原因：接口可能已变更
-  # - id: "linuxdo"
-  #   name: "LinuxDo"        # 失败原因：接口可能已变更
+- id: "ithome"
+  name: "IT之家"
+  
+- id: "v2ex-share"
+  name: "V2EX"
+
+- id: "solidot"
+  name: "Solidot"
+
+## 英文科技
+
+- id: "hackernews"
+  name: "Hacker News"
+
+- id: "producthunt"
+  name: "Product Hunt"
+
+- id: "github-trending-today"
+  name: "Github"
+
+
+# ============================================
+# 财经平台 (13个)
+# ============================================
+
+## 华尔街见闻系列
+
+# - id: "wallstreetcn-quick"
+#   name: "华尔街见闻"
+
+# - id: "wallstreetcn-news"
+#   name: "华尔街见闻"
+
+- id: "wallstreetcn-hot"
+  name: "华尔街见闻"
+
+## 财联社系列
+
+# - id: "cls-telegraph"
+#   name: "财联社"
+
+# - id: "cls-depth"
+#   name: "财联社"
+
+- id: "cls-hot"
+  name: "财联社"
+
+## 其他财经快讯
+
+# - id: "mktnews-flash"
+#   name: "MKTNews"
+
+# - id: "jin10"
+#   name: "金十数据"
+
+# - id: "gelonghui"
+#   name: "格隆汇"
+
+# - id: "fastbull-express"
+#   name: "法布财经"
+
+# - id: "fastbull-news"
+#   name: "法布财经"
+
+## 投资社区
+
+- id: "xueqiu-hotstock"
+  name: "雪球"
+
+
+# ============================================
+# 国际平台 (5个)
+# ============================================
+
+- id: "zaobao"
+  name: "联合早报"
+
+- id: "cankaoxiaoxi"
+  name: "参考消息"
+
+# - id: "kaopu"
+#   name: "靠谱新闻"
+
+# - id: "steam"
+#   name: "Steam"
+
+# - id: "sputniknewscn"
+#   name: "卫星通讯社"
+
+# ============================================
+# 推荐配置方案（取消下面某个方案的注释即可使用）
+# ============================================
+
+# 方案1：默认配置（11个平台）- 全面监控
+# platforms:
+#   - id: "toutiao"
+#     name: "今日头条"
+#   - id: "baidu"
+#     name: "百度热搜"
+#   - id: "wallstreetcn-hot"
+#     name: "华尔街见闻"
+#   - id: "thepaper"
+#     name: "澎湃新闻"
+#   - id: "bilibili-hot-search"
+#     name: "哔哩哔哩"
+#   - id: "cls-hot"
+#     name: "财联社"
+#   - id: "ifeng"
+#     name: "凤凰网"
+#   - id: "tieba"
+#     name: "百度贴吧"
+#   - id: "weibo"
+#     name: "微博"
+#   - id: "douyin"
+#     name: "抖音"
+#   - id: "zhihu"
+#     name: "知乎"
+
+# 方案2：轻量级配置（5个平台）- 核心热点
+# platforms:
+#   - id: "zhihu"
+#     name: "知乎"
+#   - id: "weibo"
+#     name: "微博"
+#   - id: "toutiao"
+#     name: "今日头条"
+#   - id: "baidu"
+#     name: "百度热搜"
+#   - id: "bilibili-hot-search"
+#     name: "哔哩哔哩"
+
+# 方案3：科技聚焦（8个平台）
+# platforms:
+#   - id: "36kr-quick"
+#     name: "36氪"
+#   - id: "juejin"
+#     name: "稀土掘金"
+#   - id: "ithome"
+#     name: "IT之家"
+#   - id: "sspai"
+#     name: "少数派"
+#   - id: "v2ex-share"
+#     name: "V2EX"
+#   - id: "hackernews"
+#     name: "Hacker News"
+#   - id: "github-trending-today"
+#     name: "Github"
+#   - id: "producthunt"
+#     name: "Product Hunt"
+
+# 方案4：财经专注（10个平台）
+# platforms:
+#   - id: "wallstreetcn-quick"
+#     name: "华尔街见闻"
+#   - id: "wallstreetcn-hot"
+#     name: "华尔街见闻"
+#   - id: "cls-telegraph"
+#     name: "财联社"
+#   - id: "cls-hot"
+#     name: "财联社"
+#   - id: "jin10"
+#     name: "金十数据"
+#   - id: "gelonghui"
+#     name: "格隆汇"
+#   - id: "fastbull-express"
+#     name: "法布财经"
+#   - id: "xueqiu-hotstock"
+#     name: "雪球"
+#   - id: "toutiao"
+#     name: "今日头条"
+#   - id: "baidu"
+#     name: "百度热搜"
+
+# 方案5：国际视野（8个平台）
+# platforms:
+#   - id: "zhihu"
+#     name: "知乎"
+#   - id: "toutiao"
+#     name: "今日头条"
+#   - id: "zaobao"
+#     name: "联合早报"
+#   - id: "sputniknewscn"
+#     name: "卫星通讯社"
+#   - id: "cankaoxiaoxi"
+#     name: "参考消息"
+#   - id: "hackernews"
+#     name: "Hacker News"
+#   - id: "solidot"
+#     name: "Solidot"
+#   - id: "wallstreetcn-hot"
+#     name: "华尔街见闻"
