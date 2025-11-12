@@ -28,6 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Create config from secrets
+        run: |
+          echo "${{ secrets.FREQUENCY_WORDS }}" > config/frequency_words.txt
+
       - name: Verify required files
         run: |
           echo "🔍 检查必需的配置文件..."
@@ -38,12 +42,7 @@ jobs:
             exit 1
           fi
 
-          if [ ! -f config/frequency_words.txt ]; then
-            echo "❌ 错误: config/frequency_words.txt 文件不存在"
-            echo "请参考项目文档创建频率词配置文件"
-            exit 1
-          fi
-
+          # frequency_words.txt 已从 Secrets 创建，无需检查
           echo "✅ 配置文件检查通过"
 
       - name: Run crawler
