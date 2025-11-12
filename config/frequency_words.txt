@@ -4,4 +4,6 @@ OPPO
 vivo
 荣耀
 RENO
+Reno
+reno
 +手机
