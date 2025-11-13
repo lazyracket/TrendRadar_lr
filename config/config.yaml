@@ -76,6 +76,7 @@ weight:
   hotness_weight: 0.1 # 热度权重
 
 # name 可以定义任意名称，只具有显示作用，即使项目运行了几天后，忽然改掉 name 也不会影响代码的正常运行
+# 以下名单最后更新于2025年11月13日整理，来自 newsnow 项目 https://github.com/ourongxing/newsnow/blob/main/shared/sources.json
 platforms:
 
 # TrendRadar 所有平台 YAML 配置
